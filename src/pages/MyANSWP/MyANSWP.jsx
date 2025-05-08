@@ -17,10 +17,10 @@ import {
 import { useEffect, useState } from 'react';
 import * as yup from 'yup';
 import { MyPlatform } from './My Platform/MyPlatform';
-import { MySSWPanel } from './MySSWPanel/MySSWPanel';
-import { LoginErrorNote } from './MySSWPanel/MySSWPanel.styled';
+import { MyANSWPPanel } from './MyANSWPPanel/MyANSWPPanel';
+import { LoginErrorNote } from './MyANSWPPanel/MyANSWPPanel.styled';
 
-const MySSW = () => {
+const MyANSWP = () => {
   const [isUserLogged, setIsUserLogged] = useState(false);
   const [timetable, setTimetable] = useState({});
   const [user, setUser] = useState({});
@@ -32,7 +32,7 @@ const MySSW = () => {
   axios.defaults.baseURL = 'https://ap-server-8qi1.onrender.com';
 
   useEffect(() => {
-    document.title = 'My SSW | SSW';
+    document.title = 'My ANSWP | ANSWP';
 
     const refreshToken = async () => {
       console.log('token refresher');
@@ -155,7 +155,7 @@ const MySSW = () => {
         </Formik>
       ) : (
         <>
-          <MySSWPanel
+          <MyANSWPPanel
             user={{
               ...user,
               visited: [
@@ -174,4 +174,4 @@ const MySSW = () => {
   );
 };
 
-export default MySSW;
+export default MyANSWP;

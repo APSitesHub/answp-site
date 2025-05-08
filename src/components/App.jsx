@@ -14,8 +14,8 @@ const Stream = lazy(() =>
   import(/* webpackChunkName: "Stream page" */ '../pages/Streams/Stream/Stream')
 );
 
-const MySSW = lazy(() =>
-  import(/* webpackChunkName: "My SSW Page" */ '../pages/MySSW/MySSW')
+const MyANSWP = lazy(() =>
+  import(/* webpackChunkName: "My ANSWP Page" */ '../pages/MyANSWP/MyANSWP')
 );
 
 const UniUserAdminPanel = lazy(() =>
@@ -38,10 +38,10 @@ export const App = () => {
       />
       <Suspense fallback={Loader} noindex={true}>
         <Routes noindex={true}>
-          <Route index path="/" element={<MySSW />} noindex={true}></Route>
+          <Route index path="/" element={<MyANSWP />} noindex={true}></Route>
           <Route
             path="admin"
-            element={<UniUserAdminPanel uni={'SSW'} lang={'pl'} />}
+            element={<UniUserAdminPanel uni={'ANSWP'} lang={'pl'} />}
             noindex={true}
           />
           <Route path="*" element={<NotFound />} noindex={true} />
